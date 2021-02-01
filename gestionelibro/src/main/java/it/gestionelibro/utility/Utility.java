@@ -10,9 +10,9 @@ import org.apache.commons.lang3.math.NumberUtils;
 public class Utility {
 	
 	public static boolean validateInput(String codiceinput, String titoloinput, String prezzoinputstring,
-			String dataarrivostring) {
+			String dataarrivostring, String autoreinput) {
 			
-		if (StringUtils.isBlank(codiceinput) || StringUtils.isBlank(titoloinput)
+		if (StringUtils.isBlank(codiceinput) || StringUtils.isBlank(titoloinput) ||StringUtils.isBlank(autoreinput)
 				|| !NumberUtils.isCreatable(prezzoinputstring) || StringUtils.isBlank(dataarrivostring)) {
 			return false;
 		}

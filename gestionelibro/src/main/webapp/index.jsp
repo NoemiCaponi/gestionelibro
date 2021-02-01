@@ -23,15 +23,15 @@
 		
 
 	  <!-- Main jumbotron for a primary marketing message or call to action -->
-	  <div class="jumbotron jumbotron-fluid" >
-	    <div class="container">
+	  <div class="jumbotron jumbotron-fluid " >
+	    <div class="container ">
 	      <h1 class="display-3">Benvenuto!</h1>
 	      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-	      <p><a class="btn btn-primary btn-lg" href="ListLibriServlet" role="button">Consulta il database &raquo;</a></p>
+	      <p><a class="btn btn-success btn-lg" href="ListLibriServlet" role="button">Apri la lista &raquo;</a></p>
 	    </div>
 	  </div>
 	  
-	  <div class="container">
+	  <div class="container shadow p-3 mb-5 bg-white rounded">
 	  
 		<div class="alert alert-danger alert-dismissible fade show ${errorMessage==null?'d-none': ''}" role="alert">
 		  ${errorMessage}
@@ -45,17 +45,17 @@
 	      <div class="col-md-4">
 	        <h2>Heading</h2>
 	        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-	        <p><a class="btn btn-secondary" href="" role="button">Inserisci nuovo &raquo;</a></p>
+	        <p><a class="btn btn-outline-success" href="PrepareInsertServlet" role="button">Inserisci nuovo &raquo;</a></p>
 	      </div>
 	      <div class="col-md-4">
 	        <h2>Heading</h2>
 	        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-	        <p><a class="btn btn-secondary" href="ListLibriServlet" role="button">Scegli dalla lista &raquo;</a></p>
+	        <p><a class="btn btn-outline-success" href="ListLibriServlet" role="button">Scegli dalla lista &raquo;</a></p>
 	      </div>
 	      <div class="col-md-4">
 	        <h2>Heading</h2>
 	        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-	        <p><a class="btn btn-secondary" href="" role="button">AAAAA &raquo;</a></p>
+	        <p><a class="btn btn-outline-success" href="ExecuteRicercaServlet" role="button">Effettua una ricerca &raquo;</a></p>
 	      </div>
 	    </div>
 	

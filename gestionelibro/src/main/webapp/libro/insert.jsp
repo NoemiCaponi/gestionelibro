@@ -23,7 +23,7 @@
 		  </button>
 		</div>
 		
-		<div class='card'>
+		<div class='card shadow-lg p-3 mb-5 bg-white rounded'>
 		    <div class='card-header'>
 		        <h5>Inserisci un nuovo libro</h5> 
 		    </div>
@@ -40,8 +40,14 @@
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label>Descrizione <span class="text-danger">*</span></label>
+								<label>Titolo <span class="text-danger">*</span></label>
 								<input type="text" name="titolo" id="titolo" class="form-control" placeholder="Inserire un titolo" required>
+							</div>
+						
+						
+						<div class="form-group col-md-6">
+								<label>Autore <span class="text-danger">*</span></label>
+								<input type="text" name="autore" id="autore" class="form-control" placeholder="Inserire un autore" required>
 							</div>
 						</div>
 						
@@ -58,7 +64,7 @@
 							
 						</div>
 							
-						<button type="submit" name="submit" value="submit" id="submit" class="btn btn-primary">Conferma</button>
+						<button type="submit" name="submit" value="submit" id="submit" class="btn btn-success">Conferma</button>
 					
 
 					</form>

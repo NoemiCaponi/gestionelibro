@@ -13,7 +13,7 @@
 <link rel="mask-icon" href="./assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
 <link rel="icon" href="./assets/img/favicons/favicon.ico">
 <meta name="msapplication-config" content="./assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+<meta name="theme-color" content="#563d7c"> 
 
 
 <style>

@@ -8,25 +8,33 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link item" href="index.jsp"><b>Home</b><span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link item" href="ListLibriServlet"><b>Lista</b></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+       <li class="nav-item">
+        <a class="nav-link item" href="PrepareInsertServlet"><b>Inserisci nuovo</b></a>
       </li>
-      <li class="nav-item dropdown">
+      <!--  <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <a class="dropdown-item" href="index.jsp">Home</a>
           <a class="dropdown-item" href="ListLibriServlet">Consulta l'archivio</a>
         </div>
-      </li>
+      </li>-->
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <form class="form-inline my-2 my-lg-0" method="post" action="ExecuteRicercaServlet" novalidate="novalidate">
+      <input class="form-control mr-sm-2" type="search" name="ricerca" id="ricerca" placeholder="Search" aria-label="Search" required>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
     </form>
   </div>
 </nav>
+
+<style>
+	.item {
+	  
+	  color:#28a745;
+
+	}
+</style>

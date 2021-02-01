@@ -46,9 +46,15 @@
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label>Descrizione <span class="text-danger">*</span></label>
+								<label>Titolo <span class="text-danger">*</span></label>
 								<input type="text" name="titolo" id="titolo" class="form-control" value="<%=libroSelezionato.getTitolo() %>" required>
 							</div>
+							
+							<div class="form-group col-md-6">
+								<label>Autore <span class="text-danger">*</span></label>
+								<input type="text" name="autore" id="autore" class="form-control" value="<%=libroSelezionato.getAutore()%>" required>
+							</div>
+						
 						</div>
 						
 						<div class="form-row">	

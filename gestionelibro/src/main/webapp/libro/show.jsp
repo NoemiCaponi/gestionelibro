@@ -15,10 +15,10 @@
 <body>
 	<jsp:include page="../navbar.jsp" />
 	
-	<main role="main" class="container">
+	<main role="main" class="container ">
 		
-		<div class='card'>
-		    <div class='card-header'>
+		<div class='card shadow p-3 mb-5 bg-white rounded'>
+		    <div class='card-header item'>
 		        Visualizza dettaglio
 		    </div>
 		    <% Libro libroInPagina = (Libro)request.getAttribute("visualizza_libro_attr"); %>
@@ -35,6 +35,11 @@
 		    	</dl>
 		    	
 		    	<dl class="row">
+				  <dt class="col-sm-3 text-right">Autore:</dt>
+				  <dd class="col-sm-9"><%=libroInPagina.getAutore() %></dd>
+		    	</dl>
+		    	
+		    	<dl class="row">
 				  <dt class="col-sm-3 text-right">Prezzo:</dt>
 				  <dd class="col-sm-9"><%=libroInPagina.getPrezzo() %></dd>
 		    	</dl>
@@ -46,8 +51,8 @@
 		    	
 		    </div>
 		    
-		    <div class='card-footer'>
-		        <a href="ListLibriServlet" class='btn btn-outline-secondary' style='width:80px'>
+		    <div class='card-footer item'>
+		        <a href="ListLibriServlet" class='btn btn-outline-success' style='width:80px'>
 		            <i class='fa fa-chevron-left'></i> Back
 		        </a>
 		    </div>

@@ -5,9 +5,12 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
 import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
 
-public class LocalEntityManagerFactoryListener {
-	
+@WebListener
+public class LocalEntityManagerFactoryListener implements ServletContextListener {
+
 	private static EntityManagerFactory entityManagerFactory;
 
 	public void contextInitialized(ServletContextEvent sce) {
@@ -46,6 +49,5 @@ public class LocalEntityManagerFactoryListener {
 			}
 		}
 	}
-
 
 }

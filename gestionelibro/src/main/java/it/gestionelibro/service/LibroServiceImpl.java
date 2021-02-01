@@ -99,4 +99,20 @@ public class LibroServiceImpl implements LibroService {
 
 	}
 
+	@Override
+	public List<Libro> cercaTuttiTitoli(String titoloInput) throws Exception {
+		EntityManager entityManager=LocalEntityManagerFactoryListener.getEntityManager();
+		try {
+		
+			libroDao.setEntityManager(entityManager);
+			
+			return libroDao.findAllByTitolo(titoloInput);
+		}catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		} finally {
+			LocalEntityManagerFactoryListener.closeEntityManager(entityManager);
+		}
+	}
+
 }

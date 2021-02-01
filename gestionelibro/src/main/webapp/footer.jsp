@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" style="background-color: #E3F3E3;">
   <div class="container">
 	  <p class="mb-0">&copy; Company 2017-2021</p>
   </div>

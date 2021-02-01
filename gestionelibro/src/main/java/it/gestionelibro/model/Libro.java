@@ -21,6 +21,8 @@ public class Libro {
 	private String codice;
 	@Column(name = "titolo")
 	private String titolo;
+	@Column(name="autore")
+	private String autore;
 	@Column(name = "prezzo")
 	private Integer prezzo;
 	@Column(name = "dataarrivo")
@@ -32,11 +34,12 @@ public class Libro {
 		
 	}
 
-	public Libro(String codice, String titolo, Integer prezzo, Date dataArrivo) {
+	public Libro(String codice, String titolo, Integer prezzo, Date dataArrivo, String autore) {
 		this.codice=codice;
 		this.titolo=titolo;
 		this.prezzo=prezzo;
 		this.dataArrivo=dataArrivo;
+		this.autore=autore;
 	}
 
 	public Long getId() {
@@ -77,6 +80,14 @@ public class Libro {
 
 	public void setDataArrivo(Date dataArrivo) {
 		this.dataArrivo = dataArrivo;
+	}
+	
+	public String getAutore() {
+		return autore;
+	}
+	
+	public void setAutore(String autore) {
+		this.autore=autore;
 	}
 	
 	

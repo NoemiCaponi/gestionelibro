@@ -24,21 +24,22 @@
 				<span aria-hidden="true">&times;</span>
 			</button>
 		</div>
-		<div class='card'>
+		<div class='card shadow-lg p-3 mb-5 bg-white rounded'>
 			<div class='card-header'>
 				<h5>Lista dei risultati</h5>
 			</div>
 			<div class='card-body'>
-				<a class="btn btn-primary " href="PrepareInsertArticoloServlet">Add
+				<a class="btn btn-success " href="PrepareInsertServlet">Add
 					New</a>
 
 				<div class='table-responsive'>
-					<table class='table table-striped '>
+					<table class='table table-success table-striped'>
 						<thead>
 							<tr>
 								<th>Id</th>
 								<th>Codice</th>
-								<th>Descrizione</th>
+								<th>Titolo</th>
+								<th>Autore</th>
 								<th>Prezzo</th>
 								<th>Data di Arrivo</th>
 								<th>Azioni</th>
@@ -51,6 +52,7 @@
 								<td><%=item.getId() %></td>
 								<td><%=item.getCodice() %></td>
 								<td><%=item.getTitolo() %></td>
+								<td><%=item.getAutore() %></td>
 								<td><%=item.getPrezzo() %></td>
 								<td><%=item.getDataArrivo()!=null? new SimpleDateFormat("dd/MM/yyyy").format(item.getDataArrivo()):"N.D."%></td>
 								<td><a class="btn  btn-sm btn-outline-secondary"
