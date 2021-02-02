@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import it.gestionelibro.model.Autore;
 import it.gestionelibro.model.Libro;
 import it.gestionelibro.service.MyServiceFactory;
 import it.gestionelibro.utility.Utility;
@@ -28,6 +29,7 @@ public class ExecuteInsertServlet extends HttpServlet {
 		
 		Date dataArrivoParsed=Utility.parseDateArrivoFromString(dataArrivoInput);
 		Integer prezzoInputParsed=Integer.parseInt(prezzoInput);
+		Autore autoreInputParsed=autoreInput;
 		
 		if(!Utility.validateInput(codiceInput, titoloInput, prezzoInput, dataArrivoInput, autoreInput)|| dataArrivoParsed==null) {
 			request.setAttribute("errorMessage","Attenzione sono presenti errori di validazione!");
@@ -35,7 +37,7 @@ public class ExecuteInsertServlet extends HttpServlet {
 			return;
 		}
 		
-		Libro libroDaInserire= new Libro(codiceInput, titoloInput, prezzoInputParsed, dataArrivoParsed, autoreInput);
+		Libro libroDaInserire= new Libro(codiceInput, titoloInput, prezzoInputParsed, dataArrivoParsed, autoreInputParsed);
 		
 		try {
 			

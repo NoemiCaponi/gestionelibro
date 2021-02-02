@@ -5,6 +5,7 @@
 	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="gestionelibro_unit" transaction-type="RESOURCE_LOCAL">
 		<class>it.gestionelibro.model.Libro</class>
+		<class>it.gestionelibro.model.Autore</class>
 		<properties>
 			<!-- setup con MySql -->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />

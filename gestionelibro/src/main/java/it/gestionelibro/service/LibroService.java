@@ -2,7 +2,7 @@ package it.gestionelibro.service;
 
 import java.util.List;
 
-import it.gestionelibro.dao.LibroDAO;
+import it.gestionelibro.dao.libro.LibroDAO;
 import it.gestionelibro.model.Libro;
 
 public interface LibroService {

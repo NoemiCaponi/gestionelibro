@@ -4,17 +4,17 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-public interface IBaseDAO<Libro> {
+public interface IBaseDAO<T> {
 
-	public List<Libro> list() throws Exception;
+	public List<T> list() throws Exception;
 
-	public Libro findById(Long id) throws Exception;
+	public T findById(Long id) throws Exception;
 
-	public void update(Libro input) throws Exception;
+	public void update(T input) throws Exception;
 
-	public void insert(Libro input) throws Exception;
+	public void insert(T input) throws Exception;
 
-	public void delete(Libro input) throws Exception;
+	public void delete(T input) throws Exception;
 
 	public void setEntityManager(EntityManager entityManager);
 

@@ -4,9 +4,12 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,8 +24,9 @@ public class Libro {
 	private String codice;
 	@Column(name = "titolo")
 	private String titolo;
-	@Column(name="autore")
-	private String autore;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "autore_id")
+	private Autore autore;
 	@Column(name = "prezzo")
 	private Integer prezzo;
 	@Column(name = "dataarrivo")
@@ -34,7 +38,7 @@ public class Libro {
 		
 	}
 
-	public Libro(String codice, String titolo, Integer prezzo, Date dataArrivo, String autore) {
+	public Libro(String codice, String titolo, Integer prezzo, Date dataArrivo, Autore autore) {
 		this.codice=codice;
 		this.titolo=titolo;
 		this.prezzo=prezzo;
@@ -82,11 +86,11 @@ public class Libro {
 		this.dataArrivo = dataArrivo;
 	}
 	
-	public String getAutore() {
+	public Autore getAutore() {
 		return autore;
 	}
 	
-	public void setAutore(String autore) {
+	public void setAutore(Autore autore) {
 		this.autore=autore;
 	}
 	

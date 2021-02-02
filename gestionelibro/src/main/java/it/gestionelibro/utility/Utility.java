@@ -7,6 +7,8 @@ import java.util.Date;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 
+import it.gestionelibro.model.Autore;
+
 public class Utility {
 	
 	public static boolean validateInput(String codiceinput, String titoloinput, String prezzoinputstring,
@@ -28,5 +30,8 @@ public class Utility {
 			return null;
 		}
 	}
+	
+	
+
 
 }

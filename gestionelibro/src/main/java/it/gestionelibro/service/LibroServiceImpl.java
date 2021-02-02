@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import it.gestionelibro.dao.LibroDAO;
+import it.gestionelibro.dao.libro.LibroDAO;
 import it.gestionelibro.model.Libro;
 import it.gestionelibro.web.listener.LocalEntityManagerFactoryListener;
 

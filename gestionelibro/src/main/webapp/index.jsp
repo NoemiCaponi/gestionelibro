@@ -27,7 +27,7 @@
 	    <div class="container ">
 	      <h1 class="display-3">Benvenuto!</h1>
 	      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-	      <p><a class="btn btn-success btn-lg" href="ListLibriServlet" role="button">Apri la lista &raquo;</a></p>
+	      <p><a class="btn btn-success btn-lg" href="ListAutoriServlet" role="button">Apri la lista Autori &raquo;</a></p>
 	    </div>
 	  </div>
 	  
@@ -50,7 +50,7 @@
 	      <div class="col-md-4">
 	        <h2>Heading</h2>
 	        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-	        <p><a class="btn btn-outline-success" href="ListLibriServlet" role="button">Scegli dalla lista &raquo;</a></p>
+	        <p><a class="btn btn-outline-success" href="ListLibriServlet" role="button">Scegli dalla lista Libri &raquo;</a></p>
 	      </div>
 	      <div class="col-md-4">
 	        <h2>Heading</h2>
