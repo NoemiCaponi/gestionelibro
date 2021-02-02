@@ -33,7 +33,7 @@ public class ExecuteModificaServlet extends HttpServlet {
 
 		try {
 			Libro libroInstance = MyServiceFactory.getLibroServiceInstance().caricaSingoloElemento(idLibroConvertito);
-			if (!Utility.validateInput(codiceInput, titoloInput, prezzoInput, dataArrivoInput, autoreInput)
+			if (!Utility.validateInput(codiceInput, titoloInput, prezzoInput, dataArrivoInput)
 					|| dataArrivoParsed == null) {
 				request.setAttribute("errorMessage", "Attenzione sono presenti errori di validazione");
 				request.setAttribute("libroAttributeModifica", libroInstance);
@@ -42,7 +42,7 @@ public class ExecuteModificaServlet extends HttpServlet {
 			}
 			libroInstance.setCodice(codiceInput);
 			libroInstance.setTitolo(titoloInput);
-			libroInstance.setAutore(autoreInput);
+			//libroInstance.setAutore(autoreInput);
 			libroInstance.setPrezzo(prezzoConvertito);
 			libroInstance.setDataArrivo(dataArrivoParsed);
 

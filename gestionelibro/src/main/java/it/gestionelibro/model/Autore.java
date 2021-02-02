@@ -37,6 +37,12 @@ public class Autore {
 		this.cognome=cognome;
 	}
 	
+	public Autore(String nome, String cognome, List<Libro>opere) {
+		this.nome=nome;
+		this.cognome=cognome;
+		this.opere=opere;
+	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -74,5 +80,11 @@ public class Autore {
 		return "Autore [nome=" + nome + ", cognome=" + cognome + "]";
 	}
 	
+	 public void addLibro(Libro libro){
+	        this.opere.add(libro);
+	        if(libro.getAutore()!=this) {
+	        	libro.setAutore(this);
+	        }
+	    }
 	
 }

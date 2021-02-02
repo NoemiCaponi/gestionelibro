@@ -63,5 +63,11 @@ public class AutoreDAOImpl implements AutoreDAO {
 		
 		return query.setParameter(1, cognomeInput+'%').getResultList();
 	}
+	
+	public Autore getEagerLibri(Long id) throws Exception{
+		TypedQuery<Autore> query=entityManager.createQuery("from Autore a left join fetch a.opere where a.idautore= ?1", Autore.class);
+				query.setParameter(1, id);
+		return query.getResultStream().findFirst().orElse(null);
+	}
 
 }

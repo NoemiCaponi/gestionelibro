@@ -9,9 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import it.gestionelibro.service.MyServiceFactory;
 
-/**
- * Servlet implementation class ListAutoriServlet
- */
+
 @WebServlet("/ListAutoriServlet")
 public class ListAutoriServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

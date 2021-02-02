@@ -11,15 +11,26 @@ import it.gestionelibro.model.Autore;
 
 public class Utility {
 	
+//	public static boolean validateInput(String codiceinput, String titoloinput, String prezzoinputstring,
+//			String dataarrivostring, String autoreinput) {
+//			
+//		if (StringUtils.isBlank(codiceinput) || StringUtils.isBlank(titoloinput) ||StringUtils.isBlank(autoreinput)
+//				|| !NumberUtils.isCreatable(prezzoinputstring) || StringUtils.isBlank(dataarrivostring)) {
+//			return false;
+//		}
+//		return true;
+//	}
+	
 	public static boolean validateInput(String codiceinput, String titoloinput, String prezzoinputstring,
-			String dataarrivostring, String autoreinput) {
+			String dataarrivostring) {
 			
-		if (StringUtils.isBlank(codiceinput) || StringUtils.isBlank(titoloinput) ||StringUtils.isBlank(autoreinput)
+		if (StringUtils.isBlank(codiceinput) || StringUtils.isBlank(titoloinput)
 				|| !NumberUtils.isCreatable(prezzoinputstring) || StringUtils.isBlank(dataarrivostring)) {
 			return false;
 		}
 		return true;
 	}
+	
 	public static Date parseDateArrivoFromString(String dataArrivoStringParam) {
 		if (StringUtils.isBlank(dataArrivoStringParam))
 			return null;
@@ -31,7 +42,13 @@ public class Utility {
 		}
 	}
 	
-	
+	public static boolean validateInputAutore(String nomeInput, String cognomeInput) {
+			
+		if (StringUtils.isBlank(nomeInput) || StringUtils.isBlank(cognomeInput)) {
+			return false;
+		}
+		return true;
+	}
 
 
 }

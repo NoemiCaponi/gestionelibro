@@ -20,5 +20,7 @@ public interface AutoreService {
 	public void rimuovi(Autore input) throws Exception;
 	
 	public List<Autore>cercaTuttiCognomi (String cognomeInput) throws Exception;
+	
+	public Autore caricaAutoreConOpere(Long id)throws Exception;
 
 }

@@ -29,13 +29,15 @@ public class ExecuteInsertServlet extends HttpServlet {
 		
 		Date dataArrivoParsed=Utility.parseDateArrivoFromString(dataArrivoInput);
 		Integer prezzoInputParsed=Integer.parseInt(prezzoInput);
-		Autore autoreInputParsed=autoreInput;
+		Autore autoreInputParsed=new Autore();
 		
-		if(!Utility.validateInput(codiceInput, titoloInput, prezzoInput, dataArrivoInput, autoreInput)|| dataArrivoParsed==null) {
+		if(!Utility.validateInput(codiceInput, titoloInput, prezzoInput, dataArrivoInput)|| dataArrivoParsed==null) {
 			request.setAttribute("errorMessage","Attenzione sono presenti errori di validazione!");
 			request.getRequestDispatcher("/libro/insert.jsp").forward(request, response);
 			return;
 		}
+		
+		//correggere autore e parsedAutore
 		
 		Libro libroDaInserire= new Libro(codiceInput, titoloInput, prezzoInputParsed, dataArrivoParsed, autoreInputParsed);
 		

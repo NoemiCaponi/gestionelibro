@@ -39,7 +39,7 @@
 								<th>Id</th>
 								<th>Codice</th>
 								<th>Titolo</th>
-								<th>Autore</th>
+								
 								<th>Prezzo</th>
 								<th>Data di Arrivo</th>
 								<th>Azioni</th>
@@ -52,7 +52,7 @@
 								<td><%=item.getId() %></td>
 								<td><%=item.getCodice() %></td>
 								<td><%=item.getTitolo() %></td>
-								<td><%=item.getAutore() %></td>
+								
 								<td><%=item.getPrezzo() %></td>
 								<td><%=item.getDataArrivo()!=null? new SimpleDateFormat("dd/MM/yyyy").format(item.getDataArrivo()):"N.D."%></td>
 								<td><a class="btn  btn-sm btn-outline-secondary"

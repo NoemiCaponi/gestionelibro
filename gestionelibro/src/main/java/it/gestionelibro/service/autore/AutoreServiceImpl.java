@@ -126,4 +126,20 @@ public class AutoreServiceImpl implements AutoreService {
 		}
 	}
 
+	@Override
+	public Autore caricaAutoreConOpere(Long id) throws Exception {
+		EntityManager entityManager=LocalEntityManagerFactoryListener.getEntityManager();
+		
+		try {
+			autoreDao.setEntityManager(entityManager);
+			return autoreDao.getEagerLibri(id);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			throw e;
+		} finally {
+			LocalEntityManagerFactoryListener.closeEntityManager(entityManager);
+		}
+	}
+
 }
