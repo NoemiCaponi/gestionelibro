@@ -93,6 +93,13 @@ public class Libro {
 	public void setAutore(Autore autore) {
 		this.autore=autore;
 	}
+
+	@Override
+	public String toString() {
+		return "Libro [codice=" + codice + ", titolo=" + titolo + ", prezzo=" + prezzo + ", dataArrivo=" + dataArrivo
+				+ "]";
+	}
+	
 	
 	
 }

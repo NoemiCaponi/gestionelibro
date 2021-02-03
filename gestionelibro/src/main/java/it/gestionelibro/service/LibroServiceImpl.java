@@ -115,4 +115,18 @@ public class LibroServiceImpl implements LibroService {
 		}
 	}
 
+	@Override
+	public Libro caricaLibroConAutore(Long idInput) throws Exception {
+		EntityManager entityManager=LocalEntityManagerFactoryListener.getEntityManager();
+		try {
+			libroDao.setEntityManager(entityManager);
+			return libroDao.findLibroConAutore(idInput);
+		}catch(Exception e) {
+			throw e;
+		} finally {
+			LocalEntityManagerFactoryListener.closeEntityManager(entityManager);
+		}
+		
+	}
+
 }

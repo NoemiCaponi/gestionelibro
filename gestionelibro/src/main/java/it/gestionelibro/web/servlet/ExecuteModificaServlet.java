@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import it.gestionelibro.model.Autore;
 import it.gestionelibro.model.Libro;
 import it.gestionelibro.service.MyServiceFactory;
 import it.gestionelibro.utility.Utility;
@@ -22,7 +23,8 @@ public class ExecuteModificaServlet extends HttpServlet {
 		String idLibroDaModificare = request.getParameter("libroId");
 		String codiceInput = request.getParameter("codice");
 		String titoloInput = request.getParameter("titolo");
-		String autoreInput = request.getParameter("autore");
+		String autoreNomeInput = request.getParameter("autorenome");
+		String autoreCognomeInput=request.getParameter("autorecognome");
 		String prezzoInput = request.getParameter("prezzo");
 		String dataArrivoInput = request.getParameter("dataArrivo");
 
@@ -32,17 +34,19 @@ public class ExecuteModificaServlet extends HttpServlet {
 		int prezzoConvertito = Integer.parseInt(prezzoInput);
 
 		try {
-			Libro libroInstance = MyServiceFactory.getLibroServiceInstance().caricaSingoloElemento(idLibroConvertito);
+			Libro libroInstance = MyServiceFactory.getLibroServiceInstance().caricaLibroConAutore(idLibroConvertito);
 			if (!Utility.validateInput(codiceInput, titoloInput, prezzoInput, dataArrivoInput)
-					|| dataArrivoParsed == null) {
+					|| dataArrivoParsed == null || !Utility.validateInputAutore(autoreNomeInput, autoreCognomeInput)) {
 				request.setAttribute("errorMessage", "Attenzione sono presenti errori di validazione");
 				request.setAttribute("libroAttributeModifica", libroInstance);
 				request.getRequestDispatcher("/libro/update.jsp").forward(request, response);
 				return;
 			}
+			
 			libroInstance.setCodice(codiceInput);
 			libroInstance.setTitolo(titoloInput);
-			//libroInstance.setAutore(autoreInput);
+			Autore autoreModificato=new Autore(autoreNomeInput, autoreCognomeInput);
+			libroInstance.setAutore(autoreModificato);
 			libroInstance.setPrezzo(prezzoConvertito);
 			libroInstance.setDataArrivo(dataArrivoParsed);
 

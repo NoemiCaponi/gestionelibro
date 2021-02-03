@@ -36,7 +36,7 @@
 		    	
 		    	<dl class="row">
 				  <dt class="col-sm-3 text-right">Autore:</dt>
-				  <dd class="col-sm-9"><%=libroInPagina.getAutore().getNome() %></dd>
+				  <dd class="col-sm-9"><%=libroInPagina.getAutore().getNome() %> <%=libroInPagina.getAutore().getCognome() %></dd>
 		    	</dl>
 		    	
 		    	<dl class="row">

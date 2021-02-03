@@ -56,6 +56,15 @@ public class LibroDAOImpl implements LibroDAO {
 		TypedQuery<Libro> query = entityManager.createQuery("from Libro l where l.titolo like ?1", Libro.class);
 		return query.setParameter(1, titoloInput+'%').getResultList();
 	}
+	
+	public Libro findLibroConAutore(Long id) throws Exception{
+		if(id==null) {
+			throw new Exception("Valore non valido");
+		}
+		TypedQuery<Libro> query=entityManager.createQuery("from Libro l left join fetch l.autore where l.autore.id= ?1", Libro.class);
+		query.setParameter(1, id);
+		return query.getResultStream().findFirst().orElse(null);
+	}
 
 
 }

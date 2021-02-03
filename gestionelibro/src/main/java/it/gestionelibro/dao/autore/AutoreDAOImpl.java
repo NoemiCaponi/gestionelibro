@@ -65,7 +65,7 @@ public class AutoreDAOImpl implements AutoreDAO {
 	}
 	
 	public Autore getEagerLibri(Long id) throws Exception{
-		TypedQuery<Autore> query=entityManager.createQuery("from Autore a left join fetch a.opere where a.idautore= ?1", Autore.class);
+		TypedQuery<Autore> query=entityManager.createQuery("from Autore a left join fetch a.opere where a.id= ?1", Autore.class);
 				query.setParameter(1, id);
 		return query.getResultStream().findFirst().orElse(null);
 	}

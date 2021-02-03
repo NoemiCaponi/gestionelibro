@@ -25,7 +25,7 @@
 		</div>
 		<div class='card shadow-lg p-3 mb-5 bg-white rounded'>
 			<div class='card-header'>
-				<h5>Lista dei risultati</h5>
+				<h5>Lista degli Autori</h5>
 			</div>
 			<div class='card-body'>
 				<a class="btn btn-success " href="PrepareInsertAutoreServlet">Add
@@ -38,7 +38,6 @@
 								<th>Id</th>
 								<th>Nome</th>
 								<th>Cognome</th>
-								 <th>Libri</th>
 								<th>Azioni</th>
 							</tr>
 						</thead>
@@ -49,13 +48,15 @@
 								<td><%=item.getId() %></td>
 								<td><%=item.getNome() %></td>
 								<td><%=item.getCognome() %></td>
-								 <td><%=item.getOpere() %></td>
+								
 								<td><a class="btn  btn-sm btn-outline-secondary"
 									href="ExecuteVisualizzaAutoreServlet?idAutore=<%=item.getId() %>">Visualizza</a>
 									<a class="btn  btn-sm btn-outline-primary ml-2 mr-2"
 									href="PrepareModificaAutoreServlet?idAutore=<%=item.getId()%>">Edit</a>
 									<a class="btn btn-outline-danger btn-sm"
 									href="PrepareRimozioneAutoreServlet?idAutore=<%=item.getId()%>">Delete</a>
+									<a class="btn btn-outline-danger btn-sm"
+									href="PrepareAggiuntaLibroServlet?idAutore=<%=item.getId()%>">Aggiungi Libro</a>
 								</td>
 							</tr>
 							<% } %>

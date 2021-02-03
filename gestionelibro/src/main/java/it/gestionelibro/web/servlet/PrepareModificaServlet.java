@@ -29,7 +29,7 @@ public class PrepareModificaServlet extends HttpServlet {
 
 		try {
 			request.setAttribute("libroAttributeModifica",
-					MyServiceFactory.getLibroServiceInstance().caricaSingoloElemento(Long.parseLong(idLibro)));
+					MyServiceFactory.getLibroServiceInstance().caricaLibroConAutore(Long.parseLong(idLibro)));
 		} catch (Exception e) {
 
 			e.printStackTrace();

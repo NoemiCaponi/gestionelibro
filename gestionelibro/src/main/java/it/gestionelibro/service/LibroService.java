@@ -20,5 +20,7 @@ public interface LibroService {
 	public void rimuovi(Libro input) throws Exception;
 	
 	public List<Libro>cercaTuttiTitoli (String titoloInput) throws Exception;
+	
+	public Libro caricaLibroConAutore(Long idInput) throws Exception;
 
 }

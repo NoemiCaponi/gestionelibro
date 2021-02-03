@@ -44,27 +44,28 @@
 								<input type="text" name="cognome" id="cognome" class="form-control" placeholder="Inserire il cognome" required>
 							</div>
 						
-						<div class="form-row">	
+							
 						<div class="form-group col-md-6">
 								<label>Titolo libro <span class="text-danger">*</span></label>
 								<input type="text" name="titolo" id="titolo" class="form-control" placeholder="Inserire un titolo" required>
 							</div>
-						</div>
+						
 						<div class="form-group col-md-6">
 								<label>Codice <span class="text-danger">*</span></label>
 								<input type="number" class="form-control" name="codice" id="codice" placeholder="Inserire il codice" required>
 							</div>
 						
+						
 							<div class="form-group col-md-6">
 								<label>Prezzo <span class="text-danger">*</span></label>
 								<input type="number" class="form-control" name="prezzo" id="prezzo" placeholder="Inserire prezzo" required>
 							</div>
-							<div class="form-group col-md-3">
+							<div class="form-group col-md-6">
 								<label>Data di Arrivo<span class="text-danger">*</span></label>
                         		<input class="form-control" id="dataArrivo" type="date" placeholder="dd/MM/yy"
                             		title="formato : gg/mm/aaaa"  name="dataArrivo" required>
-							</div>
 							
+							</div>
 						</div>
 							
 						<button type="submit" name="submit" value="submit" id="submit" class="btn btn-success">Conferma</button>

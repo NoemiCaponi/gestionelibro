@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<jsp:include page="../header.jsp" />
+<jsp:include page="../header.jsp" />
 <title>Aggiorna Dati</title>
 
 <!-- style per le pagine diverse dalla index -->
@@ -52,7 +52,8 @@
 							
 							<div class="form-group col-md-6">
 								<label>Autore <span class="text-danger">*</span></label>
-								<input type="text" name="autore" id="autore" class="form-control" value="<%=libroSelezionato.getAutore()%>" required>
+								<input type="text" name="autorenome" id="autorenome" class="form-control" value="<%=libroSelezionato.getAutore().getNome()%>" required>
+								<input type="text" name="autorecognome" id="autorecognome" class="form-control" value="<%=libroSelezionato.getAutore().getCognome()%>" required>
 							</div>
 						
 						</div>

@@ -28,7 +28,7 @@ public class ExecuteVisualizzaServlet extends HttpServlet {
 
 		try {
 			request.setAttribute("visualizza_libro_attr",
-					MyServiceFactory.getLibroServiceInstance().caricaSingoloElemento(Long.parseLong(idLibro)));
+					MyServiceFactory.getLibroServiceInstance().caricaLibroConAutore(Long.parseLong(idLibro)));
 		} catch (Exception e) {
 			e.printStackTrace();
 			request.setAttribute("errorMessage", "Attenzione si è verificato un errore.");

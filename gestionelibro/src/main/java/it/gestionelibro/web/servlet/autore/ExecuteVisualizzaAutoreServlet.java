@@ -26,7 +26,8 @@ public class ExecuteVisualizzaAutoreServlet extends HttpServlet {
 
 		try {
 			request.setAttribute("visualizza_autore_attr",
-					MyServiceFactory.getAutoreServiceInstance().caricaSingoloElemento(Long.parseLong(idAutore)));
+					MyServiceFactory.getAutoreServiceInstance().caricaAutoreConOpere(Long.parseLong(idAutore)));
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			request.setAttribute("errorMessage", "Attenzione si è verificato un errore.");

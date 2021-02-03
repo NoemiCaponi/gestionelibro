@@ -39,14 +39,13 @@ public class ExecuteInserisciAutoreServlet extends HttpServlet {
 		}
 
 		Autore autoreInput = new Autore(nomeParam, cognomeParamString);
-		Libro libroNuovo = new Libro(titoloParamString, codiceParamString, prezzoInputParsed, dataArrivoParsed,
+		Libro libroNuovo = new Libro (codiceParamString, titoloParamString, prezzoInputParsed, dataArrivoParsed,
 				autoreInput);
 		autoreInput.addLibro(libroNuovo);
 
 		try {
 			
 			MyServiceFactory.getAutoreServiceInstance().inserisciNuovo(autoreInput);
-			//MyServiceFactory.getLibroServiceInstance().inserisciNuovo(libroNuovo);
 			request.setAttribute("listaAutoriAttribute", MyServiceFactory.getAutoreServiceInstance().listAll());
 			request.setAttribute("successMessage", "Inserimento eseguito correttamente!");
 

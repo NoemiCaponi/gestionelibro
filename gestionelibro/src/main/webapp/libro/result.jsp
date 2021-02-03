@@ -39,7 +39,6 @@
 								<th>Id</th>
 								<th>Codice</th>
 								<th>Titolo</th>
-								
 								<th>Prezzo</th>
 								<th>Data di Arrivo</th>
 								<th>Azioni</th>
